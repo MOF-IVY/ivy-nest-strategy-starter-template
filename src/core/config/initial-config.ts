@@ -2,26 +2,20 @@ import { IScriptConfig } from './script-config.model';
 
 export const InitialScriptConfig: IScriptConfig = {
   leverage: 1,
-  minBuyBudget: 2,
-  isPaperMode: true,
+  minBuyBudget: 10,
+  isPaperMode: false,
   exchangeMarket: 'bybit_linear',
 
   maxTotalOps: 0,
-  maxConcurrentOps: 10,
+  maxConcurrentOps: 0,
 
-  takeProfitPercentage: null,
+  mainTfs: ['1m'],
 
-  normalOpenMode: 'Market',
-  stopLossCloseMode: 'Market',
-  takeProfitCloseMode: 'Market',
-
-  mainTfs: ['30m'],
-
-  pumpTFs: ['1d'],
-  pumpingSymbolsPerTF: 3,
+  pumpTFs: [],
+  pumpingSymbolsPerTF: 0,
   pumpStrongestPresenceDisabled: false,
 
-  dumpTFs: ['1d'],
-  dumpingSymbolsPerTF: 3,
+  dumpTFs: [],
+  dumpingSymbolsPerTF: 0,
   dumpStrongestPresenceDisabled: false,
 };
